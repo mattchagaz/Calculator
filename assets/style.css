@@ -29,7 +29,7 @@ body {
 
 .btn-number {
     font-weight: bolder;
-  }
+}
 
 .calculator {
     position: relative;
@@ -38,6 +38,7 @@ body {
     padding: 20px;
     border-radius: 30px;
     box-shadow: 0 0 30px #94e4f8;
+    animation: toBottom 1.2s;
 }
 
 .theme-toggler {
@@ -84,7 +85,7 @@ body {
     font-size: 30px;
     margin-bottom: 20px;
     overflow-x: scroll;
-  }
+}
 
 #display::-webkit-scrollbar {
     display: block;
@@ -139,46 +140,56 @@ button#equal {
 .calculator button.btn-operator {
     background-color: #75bbe4;
     color: #b3e7ff;
-  }
-  
-  .calculator button.btn-equal {
+}
+
+.calculator button.btn-equal {
     background-color: #56cfe4ab;
     color: #ffffff;
-  }
+}
 
-  /* dark theme */
+/* dark theme */
 
-  .calculator.dark {
+.calculator.dark {
     background-color: #000000d2;
-  }
+}
 
-  .calculator.dark #display {
+.calculator.dark #display {
     color: #c0c0c0;
-  }
+}
 
-  .calculator.dark button#clear {
+.calculator.dark button#clear {
     background-color: #41414186;
     color: #7e7e7e;
-  }
+}
 
-  .calculator.dark button#backspace {
-      background-color: #41414186;
+.calculator.dark button#backspace {
+    background-color: #41414186;
     color: #7e7e7e;
-  }
+}
 
-  .calculator.dark button.btn-number {
+.calculator.dark button.btn-number {
     background-color: #1a1a1a8a;
     color: #025fc9;
-  }
+}
 
-  .calculator.dark button.btn-operator {
+.calculator.dark button.btn-operator {
     background-color: #025fc98e;
     color: #09daff;
-  }
-  
-  .calculator.dark button.btn-equal {
+}
+
+.calculator.dark button.btn-equal {
     background-color: #599eecd3;
     color: #ffffff;
-  }
+}
 
- 
+@keyframes toBottom {
+    from {
+        opacity: 0;
+        transform: translateY(-300px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
